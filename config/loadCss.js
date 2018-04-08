@@ -17,21 +17,28 @@ exports.loadCss = ()=>({
                 exclude : /node_modules/,
                 use : ExtractTextWebpackPlugin.extract({
                     fallback : 'style-loader',
-                    use : ['css-loader','postcss-loader']
+                    use : ['css-loader',{
+                        loader:'postcss-loader',
+                        options:{
+                            plugins: {
+                                'autoprefixer': {}
+                            }
+                        }
+                    }]
                 })
             },{
                 test :/\.scss/g,
                 exclude : /node_modules/,
                 use : ExtractTextWebpackPlugin.extract({
                     fallback : 'style-loader',
-                    use : ['scss-loader','style-loader']
+                    use : ['scss-loader','css-loader']
                 })
             },{
                 test : /\.sass/g,
                 exclude : /node_modules/,
                 use : ExtractTextWebpackPlugin.extract({
                     fallback : 'style-loader',
-                    use : ['sass-loader','style-loader']
+                    use : ['sass-loader','css-loader']
                 })
             }
         ]
