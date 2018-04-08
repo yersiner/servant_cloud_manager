@@ -1,0 +1,23 @@
+{
+  "name": "servant_cloud_manager",
+  "version": "1.0.0",
+  "description": "this is a sysytem for thankwork firm,used vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yersiner/servant_cloud_manager.git"
+  },
+  "keywords": [
+    "vue",
+    "webpack"
+  ],
+  "author": "yesier&&clnice",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yersiner/servant_cloud_manager/issues"
+  },
+  "homepage": "https://github.com/yersiner/servant_cloud_manager#readme"
+}
