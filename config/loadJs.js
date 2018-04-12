@@ -23,6 +23,7 @@ exports.loadJs = (flag)=>({
                 loader : 'vue-loader',
                 options:{
                     extractCSS : flag,
+                    postcss: [require("autoprefixer")()],
                 }
             }
         ]

@@ -1,0 +1,19 @@
+
+$dark_blue : #6c81ff;
+$light_blue : #9baaff;
+
+$dark_black : #262523;
+$light_gray : #808183;
+$bg_color : #f0f0fa;
+$orange : #ff6100;
+$border_gray : #cbccd0;
+
+
+
+
+
+/*得到最终大小*/
+@function get_size($origin){
+  @return 640*$origin*2/108000 + rem;
+}
+

@@ -12,8 +12,9 @@ const devServer = require("./config/loadServer");
 const PATH = {
     app : path.join(__dirname,"src"),
     build : path.join(__dirname,"dist"),
-    publicPath : '/'
+    publicPath : process.env==="production"?'./':'/'
 }
+
 const commonConfig = merge([
     {
         entry : [PATH.app],

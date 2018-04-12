@@ -7,20 +7,20 @@
 * }
 * */
 //方法1 webpack的原生方式
-const Test = r => require.ensure([],()=>r(require("../component/test.vue")),"test")
+const Index = r => require.ensure([],()=>r(require("../component/index.vue")),"index")
 //方法2
-const Test1 = ()=>import('../component/test.vue')
+const Index1 = ()=>import('../component/index.vue')
 
 const routes = [
     {
-        name : 'test',
+        name : 'Index',
         path:"/",
-        component : Test,
+        component : Index,
         meta:{title : 'test',auth:true}
     },{
-        name : 'test1',
-        path:"/test1",
-        component : Test1,
+        name : 'Index',
+        path:"/index",
+        component : Index1,
         meta:{title : 'test1',auth:true}
     }
 ]

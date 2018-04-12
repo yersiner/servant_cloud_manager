@@ -13,18 +13,11 @@ exports.loadCss = ()=>({
     module : {
         rules :[
             {
-                test :/.css$/g,
+                test:/.css/g,
                 exclude : /node_modules/,
                 use : ExtractTextWebpackPlugin.extract({
                     fallback : 'style-loader',
-                    use : ['css-loader',{
-                        loader:'postcss-loader',
-                        options:{
-                            plugins: {
-                                'autoprefixer': {}
-                            }
-                        }
-                    }]
+                    use : ["css-loader","postcss-loader"]
                 })
             },{
                 test :/\.scss/g,
